@@ -1,0 +1,37 @@
+{% extends 'navigation.html' %}
+{% load static %}
+
+{% block css %}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #222; /* Ensures it blends with most dark themes */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+{% endblock %}
+
+{% block footer %}
+<footer id="footer" class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <p class="text-white mb-0">Copyright &copy; 2020 All rights reserved | Made with <i class="fa fa-heart"></i> by Pawan Kumar</p>
+            </div>
+            <div class="col-sm-6">
+                <ul class="social-icons list-inline mb-0">
+                    <li class="list-inline-item"><a href="#" class="text-white"><i class="fa fa-facebook"></i></a></li>
+                    <li class="list-inline-item"><a href="#" class="text-white"><i class="fa fa-twitter"></i></a></li>
+                    <li class="list-inline-item"><a href="#" class="text-white"><i class="fa fa-google-plus"></i></a></li>
+                    <li class="list-inline-item"><a href="#" class="text-white"><i class="fa fa-linkedin"></i></a></li>
+                    <li class="list-inline-item"><a href="#" class="text-white"><i class="fa fa-youtube"></i></a></li>
+                    <li class="list-inline-item"><a href="#" class="text-white"><i class="fa fa-github"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+{% endblock %}

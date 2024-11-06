@@ -1,0 +1,118 @@
+/* Main container to center the login form */
+.limiter {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f4f6f8;
+}
+
+/* Container for the login box */
+.container-login100 {
+    width: 380px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    text-align: center;
+}
+
+/* Avatar image container */
+.login100-form-avatar {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.login100-form-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Form title */
+.login100-form-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Input fields */
+.wrap-input100 {
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input100 {
+    font-size: 16px;
+    color: #333;
+    padding: 15px;
+    width: 100%;
+    background: #f4f6f8;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input100:focus {
+    background: #fff;
+    border-color: #66afe9;
+    box-shadow: 0 0 5px rgba(102, 175, 233, 0.6);
+}
+
+/* Icon inside input */
+.symbol-input100 {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+    font-size: 18px;
+}
+
+/* Submit button */
+.container-login100-form-btn {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.login100-form-btn {
+    background: #4CAF50;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login100-form-btn:hover {
+    background: #45a049;
+}
+
+/* Footer for forgot password and other links */
+.text-center {
+    margin-top: 15px;
+}
+
+.txt1 {
+    color: #666;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.txt1:hover {
+    color: #4CAF50;
+}
+

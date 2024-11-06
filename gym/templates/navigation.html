@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <title>Gym Management</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <!-- Custom and FontAwesome CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- Page Specific CSS -->
+    <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/prettyPhoto.css' %}">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{% static 'images/icons/favicon.ico' %}">
+    
+    <style>
+        {% block css %}{% endblock %}
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="{% static 'images/logo2.png' %}" alt="logo" style="width: 200px; height: 30px; border-radius: 10px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+                </ul>
+                {% if request.user.is_staff %}
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Enquiry</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="/add_enquiry">Add Enquiry</a>
+                            <a class="dropdown-item" href="/view_enquiry">View Enquiry</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Plan</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="/add_plan">Add Plan</a>
+                            <a class="dropdown-item" href="/view_plan">View Plan</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Equipment</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="/add_equipment">Add Equipment</a>
+                            <a class="dropdown-item" href="/view_equipment">View Equipment</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Member</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="/add_member">Add Member</a>
+                            <a class="dropdown-item" href="/view_member">View Member</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+                </ul>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+
+    {% block body %}{% endblock %}
+
+    {% block footer %}
+    <!-- Footer content can be added here if needed -->
+    {% endblock %}
+    
+    <!-- External JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="{% static 'js/custom-scripts.js' %}"></script>
+    <script>
+        {% block js %}{% endblock %}
+    </script>
+</body>
+
+</html>
